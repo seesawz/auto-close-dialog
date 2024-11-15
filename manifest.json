@@ -1,0 +1,22 @@
+{
+  "name": "Auto Close Dialog",
+  "description": "帮助你关闭那些烦人的dialog",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
